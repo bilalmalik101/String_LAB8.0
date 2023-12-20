@@ -27,10 +27,21 @@ void printWithSpaces(const char*str){
   } 
   
 }
-
-printWithSpaces() {}
-
-revealGuessedLetter() {}
+int revealGuessedLetter(const char*solution,char*revealed,char guessedletter){
+  if(solution==NULL || revealed==NULL){
+    printf("address invalid\n");
+    return 1;
+  }
+  int mode=0;
+  //if both strings equals to '\0' loop terminated
+  for(int i=0;solution[i]!='\0' && revealed[i]!='\0';i++){
+    if(revealed[i]=='_' && solution[i]==guessedletter){
+      revealed[i]=guessedletter;
+      mode=1;
+    }
+  }
+  return mode;
+}
 
 checkGuess() {}
 
