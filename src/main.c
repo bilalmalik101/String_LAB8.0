@@ -26,6 +26,15 @@ int main(int argc, char **argv) {
 
   // Starts the game
   startGame(guessWords[stringNumber]);
+  int lenghth=10;
+  char string[lenghth+1];
+  initializeBlankString(lenghth,string);
+  printf("initialized string= %s\n",string);
+  printWithSpaces(string);
+  const char*solution="dinosaur";
+  char revealed[]="_____";
+  char guessedletter='a';
+  checkGuess(solution,revealed);
 
   return 0;
 }
