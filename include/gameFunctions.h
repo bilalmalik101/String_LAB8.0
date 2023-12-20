@@ -1,15 +1,16 @@
 
-//TODO: define, document, and implement this function
-initializeBlankString();
+void initializeBlankString(int lenghth,char*string);
 
-//TODO: define, document, and implement this function
-printWithSpaces();
+//for space in strings
+void printWithSpaces(const char*string);
 
-//TODO: define, document, and implement this function
-revealGuessedLetter();
+//function to take two strings and run untile both equal to '\0'
 
-//TODO: define, document, and implement this function
-checkGuess();
+int revealGuessedLetter(const char*solution,char*revealed,char guessedletter);
+
+
+//compare two strings
+int checkGuess(const char*solution,const char*revealed);
 
 
 //the following functions have been done for you.

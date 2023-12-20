@@ -3,8 +3,16 @@
 #include <string.h>
 
 #include "gameFunctions.h"
-
-initializeBlankString() {}
+//just to store '-' in string
+void initializeBlankString(int lenghth,char*string) {
+  if(lenghth<=0||string==NULL){
+    printf("Invalid input given:\n");
+    return;
+  }
+  for(int i=0;i<lenghth;i++){
+    string[i]='_';
+  }
+}
 
 printWithSpaces() {}
 
