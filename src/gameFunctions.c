@@ -12,6 +12,20 @@ void initializeBlankString(int lenghth,char*string) {
   for(int i=0;i<lenghth;i++){
     string[i]='_';
   }
+  string[lenghth-1]='\0';
+}
+//to add spaces in charc of strings
+void printWithSpaces(const char*str){
+  if(str==NULL){
+    printf("invalid\n");
+    return;
+  }
+  //To find lenght of string
+  int lenghth=strlen(str);
+  for(int i=0;i<lenghth;i++){
+   printf("%c",str[i]);
+  } 
+  
 }
 
 printWithSpaces() {}
