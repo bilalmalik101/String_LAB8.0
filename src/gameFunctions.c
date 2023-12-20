@@ -42,8 +42,15 @@ int revealGuessedLetter(const char*solution,char*revealed,char guessedletter){
   }
   return mode;
 }
-
-checkGuess() {}
+//compare both strings
+int checkGuess(const char*solution,const char*revealed) {
+  if(solution==NULL||revealed==NULL){
+    printf("invalid\n");
+    return 0;
+  }
+  int result= strncmp(solution,revealed);
+  return (result==0)?:0;
+}
 
 void startGame(char word[25]) {
   int won = 0;  // Flag to see if the user has won yet
